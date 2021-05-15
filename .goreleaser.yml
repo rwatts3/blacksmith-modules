@@ -1,0 +1,19 @@
+project_name: "blacksmith-modules"
+dist: "./releases"
+
+before:
+  hooks:
+    - "./scripts/build.sh"
+
+builds:
+  - skip: true
+
+changelog:
+  skip: true
+
+release:
+  name_template: "v{{ .Version }}"
+  prerelease: false
+  github:
+    owner: "nunchistudio"
+    name: "blacksmith-modules"
