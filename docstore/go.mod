@@ -3,7 +3,7 @@ module github.com/nunchistudio/blacksmith-modules/docstore
 go 1.16
 
 require (
-	github.com/nunchistudio/blacksmith v0.17.0
+	github.com/nunchistudio/blacksmith v0.17.1
 	github.com/sirupsen/logrus v1.8.1
 	gocloud.dev v0.22.0
 	gocloud.dev/docstore/mongodocstore v0.22.0

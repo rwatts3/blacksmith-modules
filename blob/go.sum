@@ -235,8 +235,8 @@ github.com/modern-go/concurrent v0.0.0-20180228061459-e0a39a4cb421/go.mod h1:6dJ
 github.com/modern-go/reflect2 v0.0.0-20180701023420-4b7aa43c6742/go.mod h1:bx2lNnkwVCuqBIxFjflWJWanXIb3RllmbCylyMrvgv0=
 github.com/niemeyer/pretty v0.0.0-20200227124842-a10e7caefd8e h1:fD57ERR4JtEqsWbfPhv4DMiApHyliiK5xCTNVSPiaAs=
 github.com/niemeyer/pretty v0.0.0-20200227124842-a10e7caefd8e/go.mod h1:zD1mROLANZcx1PVRCS0qkT7pwLkGfwJo4zjcN/Tysno=
-github.com/nunchistudio/blacksmith v0.17.0 h1:kiiGqhXKTOLthpZrAjjUMBX0AJnOTejdZsxbHqIi+TM=
-github.com/nunchistudio/blacksmith v0.17.0/go.mod h1:mGQi9SK8YcnI7Hx3o0EEld3HoL9S2GD7SM6JwPrq+Qk=
+github.com/nunchistudio/blacksmith v0.17.1 h1:bNDsPrecgifIOLPf8nr21fSw2HOaOObxJ6mVOn6M0vE=
+github.com/nunchistudio/blacksmith v0.17.1/go.mod h1:mGQi9SK8YcnI7Hx3o0EEld3HoL9S2GD7SM6JwPrq+Qk=
 github.com/pkg/errors v0.9.1 h1:FEBLx1zS214owpjy7qsBeixbURkuhQAwrK5UwLGTwt4=
 github.com/pkg/errors v0.9.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=

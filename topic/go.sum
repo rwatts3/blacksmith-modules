@@ -291,8 +291,8 @@ github.com/nats-io/nkeys v0.2.0/go.mod h1:XdZpAbhgyyODYqjTawOnIOI7VlbKSarI9Gfy1t
 github.com/nats-io/nuid v1.0.1 h1:5iA8DT8V7q8WK2EScv2padNa/rTESc1KdnPw4TC2paw=
 github.com/nats-io/nuid v1.0.1/go.mod h1:19wcPz3Ph3q0Jbyiqsd0kePYG7A95tJPxeL+1OSON2c=
 github.com/niemeyer/pretty v0.0.0-20200227124842-a10e7caefd8e/go.mod h1:zD1mROLANZcx1PVRCS0qkT7pwLkGfwJo4zjcN/Tysno=
-github.com/nunchistudio/blacksmith v0.17.0 h1:kiiGqhXKTOLthpZrAjjUMBX0AJnOTejdZsxbHqIi+TM=
-github.com/nunchistudio/blacksmith v0.17.0/go.mod h1:mGQi9SK8YcnI7Hx3o0EEld3HoL9S2GD7SM6JwPrq+Qk=
+github.com/nunchistudio/blacksmith v0.17.1 h1:bNDsPrecgifIOLPf8nr21fSw2HOaOObxJ6mVOn6M0vE=
+github.com/nunchistudio/blacksmith v0.17.1/go.mod h1:mGQi9SK8YcnI7Hx3o0EEld3HoL9S2GD7SM6JwPrq+Qk=
 github.com/pierrec/lz4 v2.5.2+incompatible/go.mod h1:pdkljMzZIN41W+lC3N2tnIh5sFi+IEE17M5jbnwPHcY=
 github.com/pierrec/lz4 v2.6.0+incompatible h1:Ix9yFKn1nSPBLFl/yZknTp8TU5G4Ps0JDmguYK6iH1A=
 github.com/pierrec/lz4 v2.6.0+incompatible/go.mod h1:pdkljMzZIN41W+lC3N2tnIh5sFi+IEE17M5jbnwPHcY=

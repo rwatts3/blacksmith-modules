@@ -5,7 +5,7 @@ go 1.16
 require (
 	github.com/bmizerany/assert v0.0.0-20160611221934-b7ed37b82869 // indirect
 	github.com/kr/pretty v0.2.1 // indirect
-	github.com/nunchistudio/blacksmith v0.17.0
+	github.com/nunchistudio/blacksmith v0.17.1
 	github.com/segmentio/backo-go v0.0.0-20200129164019-23eae7c10bd3 // indirect
 	github.com/segmentio/ksuid v1.0.3
 	github.com/sirupsen/logrus v1.8.1

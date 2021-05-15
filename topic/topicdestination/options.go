@@ -121,7 +121,7 @@ type Options struct {
 	// messages.
 	//
 	// Format for AWS SNS: "arn:aws:sns:<region>:<id>:<topic>"
-	// Format for AWS SQS: "arn:aws:sqs:<region>:<id>:<topic>"
+	// Format for AWS SQS: "arn:aws:sqs:<region>:<id>:<queue>"
 	// Format for Azure Service Bus: "<topic>"
 	// Format for Google Pub / Sub: "<project>/<topic>"
 	// Format for Apache Kafka: "<topic>"
