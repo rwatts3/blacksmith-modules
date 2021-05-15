@@ -3,6 +3,7 @@ package topicdestination
 import (
 	"context"
 	"fmt"
+	"strings"
 
 	"github.com/nunchistudio/blacksmith/flow/destination"
 	"github.com/nunchistudio/blacksmith/helper/errors"
@@ -73,7 +74,9 @@ func (d *Topic) Init(tk *destination.Toolkit) error {
 	case DriverAWSSNS:
 		topic, err = pubsub.OpenTopic(d.ctx, "awssns:///"+url)
 	case DriverAWSSQS:
-		topic, err = pubsub.OpenTopic(d.ctx, "awssqs://"+url)
+		splitted := strings.Split(url, ":")
+		transformed := splitted[2] + "." + splitted[3] + ".amazonaws.com/" + splitted[4] + "/" + splitted[5]
+		topic, err = pubsub.OpenTopic(d.ctx, "awssqs://"+transformed)
 	case DriverAzureServiceBus:
 		topic, err = pubsub.OpenTopic(d.ctx, "azuresb://"+url)
 	case DriverGooglePubSub:

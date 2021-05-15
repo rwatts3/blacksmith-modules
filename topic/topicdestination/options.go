@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"net/url"
 	"os"
+	"strings"
 
 	"github.com/nunchistudio/blacksmith/flow/destination"
 	"github.com/nunchistudio/blacksmith/helper/errors"
@@ -120,7 +121,7 @@ type Options struct {
 	// messages.
 	//
 	// Format for AWS SNS: "arn:aws:sns:<region>:<id>:<topic>"
-	// Format for AWS SQS: "sqs.<region>.amazonaws.com/<id>/<queue>"
+	// Format for AWS SQS: "arn:aws:sqs:<region>:<id>:<topic>"
 	// Format for Azure Service Bus: "<topic>"
 	// Format for Google Pub / Sub: "<project>/<topic>"
 	// Format for Apache Kafka: "<topic>"
@@ -218,6 +219,15 @@ those for the AWS SNS / SQS drivers.
 */
 func (env *Options) validateDriverAWSSNSSQS(name string) []errors.Validation {
 	validations := []errors.Validation{}
+
+	// Validate the AWS ARN.
+	splitted := strings.Split(env.Connection, ":")
+	if len(splitted) != 6 {
+		validations = append(validations, errors.Validation{
+			Message: "AWS ARN not valid",
+			Path:    []string{"Options", "Destinations", name, "Connection"},
+		})
+	}
 
 	// Add a validation error if the AWS access key is not set.
 	if os.Getenv("AWS_ACCESS_KEY_ID") == "" {
