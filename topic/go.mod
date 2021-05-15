@@ -1,4 +1,4 @@
-module github.com/nunchistudio/blacksmith-modules/pubsub
+module github.com/nunchistudio/blacksmith-modules/topic
 
 go 1.16
 
