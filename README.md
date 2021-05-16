@@ -1,11 +1,16 @@
 # Blacksmith modules
 
-Repository holding third-party Go modules for [Blacksmith](https://nunchi.studio/blacksmith).
+Repository holding [third-party Go modules](https://nunchi.studio/blacksmith/modules)
+for [Blacksmith](https://nunchi.studio/blacksmith).
 
-Each module offers a Go API that seats between a Blacksmith application and the
+Each module offers a Go API that sits between a Blacksmith application and the
 desired system.
 
 ![Blacksmith modules](https://nunchi.studio/images/blacksmith/modules.png)
+
+**Related resources:**
+- [Go modules on Nunchi website](https://nunchi.studio/blacksmith/modules)
+- [Go API reference on Go Developer Portal](https://pkg.go.dev/github.com/nunchistudio/blacksmith-modules)
 
 ## Version compatibility
 
