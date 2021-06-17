@@ -4,4 +4,4 @@ import (
 	"github.com/nunchistudio/blacksmith/flow/destination"
 )
 
-var _ destination.Action = Run{}
+var _ destination.Action = RunStatements{}

@@ -6,6 +6,8 @@ level: Beginner
 modules:
   - sqlike
 links:
+  - name: TLT guides with SQL
+    url: /blacksmith/tlt
   - name: Go API reference
     url: https://pkg.go.dev/github.com/nunchistudio/blacksmith-modules/sqlike
   - name: Source code

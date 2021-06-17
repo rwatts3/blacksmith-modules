@@ -10,10 +10,11 @@ import (
 )
 
 /*
-Run implements the Blacksmith destination.Action interface for the action
-"run". It holds the complete job's structure to load into the destination.
+RunStatements implements the Blacksmith destination.Action interface for the
+action "run-statements". It holds the complete job's structure to load into
+the destination.
 */
-type Run struct {
+type RunStatements struct {
 	env *Options
 
 	// Statements holds all the prepared statements with their respective query
@@ -22,26 +23,26 @@ type Run struct {
 }
 
 /*
-String returns the string representation of the action Run.
+String returns the string representation of the action RunStatements.
 */
-func (a Run) String() string {
-	return "run"
+func (a RunStatements) String() string {
+	return "run-statements"
 }
 
 /*
 Schedule allows the action to override the schedule options of its
 destination. Do not override.
 */
-func (a Run) Schedule() *destination.Schedule {
+func (a RunStatements) Schedule() *destination.Schedule {
 	return nil
 }
 
 /*
 Marshal is the function being run when the action receives data into
-the Run receiver. It allows to transform and enrich the data before
-saving it in the store adapter.
+the RunStatements receiver. It allows to transform and enrich the data
+before saving it in the store adapter.
 */
-func (a Run) Marshal(tk *destination.Toolkit) (*destination.Job, error) {
+func (a RunStatements) Marshal(tk *destination.Toolkit) (*destination.Job, error) {
 
 	// Try to marshal the data passed directly to the receiver.
 	data, err := json.Marshal(&a)
@@ -66,7 +67,7 @@ func (a Run) Marshal(tk *destination.Toolkit) (*destination.Job, error) {
 Load is the function being run by the scheduler to load the data into
 the destination. It is in charge of the "L" in the ETL process.
 */
-func (a Run) Load(tk *destination.Toolkit, queue *store.Queue, then chan<- destination.Then) {
+func (a RunStatements) Load(tk *destination.Toolkit, queue *store.Queue, then chan<- destination.Then) {
 
 	// Whenever we return, inform the scheduler with the load status.
 	var err error
@@ -102,7 +103,7 @@ func (a Run) Load(tk *destination.Toolkit, queue *store.Queue, then chan<- desti
 				break
 			}
 
-			var run Run
+			var run RunStatements
 			err = json.Unmarshal(job.Data, &run)
 			if err != nil {
 				discard = true

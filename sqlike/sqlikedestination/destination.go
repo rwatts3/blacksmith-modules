@@ -8,6 +8,7 @@ import (
 	"github.com/nunchistudio/blacksmith/flow/destination"
 	"github.com/nunchistudio/blacksmith/helper/errors"
 	"github.com/nunchistudio/blacksmith/helper/logger"
+	"github.com/nunchistudio/blacksmith/warehouse"
 
 	"github.com/nunchistudio/blacksmith-modules/sqlike"
 )
@@ -19,6 +20,7 @@ every SQL destinations.
 type SQLike struct {
 	options *destination.Options
 	env     *Options
+	wh      *warehouse.Warehouse
 }
 
 /*
@@ -51,11 +53,17 @@ func (d *SQLike) String() string {
 }
 
 /*
-Init is part of the destination.WithHooks interface. Init does nothing since we
-do not need to initialize anything for the destination. The SQL client is already
-initialized and passed in the destination's options.
+Init is part of the destination.WithHooks interface. The SQL client is already
+initialized and passed in the destination's options. But we still need to
+save the warehouse for future use.
 */
 func (d *SQLike) Init(tk *destination.Toolkit) error {
+	wh, err := d.AsWarehouse()
+	if err != nil {
+		return err
+	}
+
+	d.wh = wh
 	return nil
 }
 
@@ -90,8 +98,12 @@ Actions return a list of actions the destination SQLike is able to handle.
 */
 func (d *SQLike) Actions() map[string]destination.Action {
 	return map[string]destination.Action{
-		"run": Run{
+		"run-statements": RunStatements{
 			env: d.env,
+		},
+		"run-operation": RunOperation{
+			env: d.env,
+			wh:  d.wh,
 		},
 	}
 }

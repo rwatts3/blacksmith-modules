@@ -2,7 +2,6 @@ package sqlike
 
 import (
 	"database/sql"
-	"io"
 	"os"
 	"path/filepath"
 	"sort"
@@ -12,6 +11,7 @@ import (
 	"github.com/nunchistudio/blacksmith/adapter/wanderer"
 	"github.com/nunchistudio/blacksmith/helper/errors"
 
+	"github.com/flosch/pongo2/v4"
 	"github.com/segmentio/ksuid"
 )
 
@@ -174,21 +174,7 @@ func RunMigration(db *sql.DB, directory string, migration *wanderer.Migration) e
 
 	// Try to open the file given the migration details.
 	filename := migration.Version.Format("20060102150405") + "." + migration.Name + "." + migration.Direction + ".sql"
-	f, err := os.Open(filepath.Join(wd, directory, filename))
-	if err != nil {
-		fail.Validations = append(fail.Validations, errors.Validation{
-			Message: err.Error(),
-			Path:    strings.Split(directory, "/"),
-		})
-
-		return fail
-	}
-
-	// Make sure to close the connection with the file.
-	defer f.Close()
-
-	// Read the file so we will then be able to run its content.
-	buf, err := io.ReadAll(f)
+	tmpl, err := pongo2.FromFile(filepath.Join(wd, directory, filename))
 	if err != nil {
 		fail.Validations = append(fail.Validations, errors.Validation{
 			Message: err.Error(),
@@ -198,8 +184,16 @@ func RunMigration(db *sql.DB, directory string, migration *wanderer.Migration) e
 		return fail
 	}
 
-	// Save the content of the file.
-	query := string(buf[:])
+	// Save the query of the compiled file.
+	query, err := tmpl.Execute(nil)
+	if err != nil {
+		fail.Validations = append(fail.Validations, errors.Validation{
+			Message: err.Error(),
+			Path:    strings.Split(filepath.Join(directory, filename), "/"),
+		})
+
+		return fail
+	}
 
 	// Start the SQL transaction.
 	txn, err := db.Begin()
