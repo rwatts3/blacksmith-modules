@@ -17,7 +17,7 @@ links:
 In this tutorial, we are going to configure and use the Go module dedicated to
 Blob stores. The module `blob` is composed of a package for Loading data to
 different stores, which is `blobdestination`. This package exposes a Blacksmith
-[`destination.Destination`](https://pkg.go.dev/github.com/nunchistudio/blacksmith/flow/destination?tab=doc#Destination).
+[`destination.Destination`](https://pkg.go.dev/github.com/nunchistudio/blacksmith/destination?tab=doc#Destination).
 
 The following blob stores are supported:
 - AWS S3-compatible (`DriverAWSS3`)
@@ -35,7 +35,7 @@ package main
 
 import (
   "github.com/nunchistudio/blacksmith"
-  "github.com/nunchistudio/blacksmith/flow/destination"
+  "github.com/nunchistudio/blacksmith/destination"
 
   "github.com/nunchistudio/blacksmith-modules/blob/blobdestination"
 )

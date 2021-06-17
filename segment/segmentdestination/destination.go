@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/nunchistudio/blacksmith/flow/destination"
+	"github.com/nunchistudio/blacksmith/destination"
 	"github.com/nunchistudio/blacksmith/helper/logger"
 )
 

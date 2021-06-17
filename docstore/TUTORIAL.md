@@ -17,7 +17,7 @@ links:
 In this tutorial, we are going to configure and use the Go module dedicated to
 Document stores. The module `docstore` is composed of a package for Loading data
 to different stores, which is `docstoredestination`. This package exposes a Blacksmith
-[`destination.Destination`](https://pkg.go.dev/github.com/nunchistudio/blacksmith/flow/destination?tab=doc#Destination).
+[`destination.Destination`](https://pkg.go.dev/github.com/nunchistudio/blacksmith/destination?tab=doc#Destination).
 
 The following document stores are supported:
 - AWS DynamoDB (`DriverAWSDynamoDB`)
@@ -36,7 +36,7 @@ package main
 
 import (
   "github.com/nunchistudio/blacksmith"
-  "github.com/nunchistudio/blacksmith/flow/destination"
+  "github.com/nunchistudio/blacksmith/destination"
 
   "github.com/nunchistudio/blacksmith-modules/docstore/docstoredestination"
 )

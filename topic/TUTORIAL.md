@@ -18,7 +18,7 @@ In this tutorial, we are going to configure and use the Go module dedicated to
 Topics of message brokers. The module `topic` is composed of a package for Loading
 (_a.k.a._ publishing) data to different brokers, which is `topicdestination`.
 This package exposes a Blacksmith
-[`destination.Destination`](https://pkg.go.dev/github.com/nunchistudio/blacksmith/flow/destination?tab=doc#Destination).
+[`destination.Destination`](https://pkg.go.dev/github.com/nunchistudio/blacksmith/destination?tab=doc#Destination).
 
 The following brokers are supported:
 - AWS SNS (`DriverAWSSNS`)
@@ -40,7 +40,7 @@ package main
 
 import (
   "github.com/nunchistudio/blacksmith"
-  "github.com/nunchistudio/blacksmith/flow/destination"
+  "github.com/nunchistudio/blacksmith/destination"
 
   "github.com/nunchistudio/blacksmith-modules/topic/topicdestination"
 )

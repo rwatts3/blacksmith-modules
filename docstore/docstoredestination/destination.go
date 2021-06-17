@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/nunchistudio/blacksmith/flow/destination"
+	"github.com/nunchistudio/blacksmith/destination"
 	"github.com/nunchistudio/blacksmith/helper/errors"
 	"github.com/nunchistudio/blacksmith/helper/logger"
 

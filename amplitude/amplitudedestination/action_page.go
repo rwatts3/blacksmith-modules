@@ -6,7 +6,7 @@ import (
 	"net/http"
 
 	"github.com/nunchistudio/blacksmith/adapter/store"
-	"github.com/nunchistudio/blacksmith/flow/destination"
+	"github.com/nunchistudio/blacksmith/destination"
 	"github.com/nunchistudio/blacksmith/helper/errors"
 
 	"github.com/segmentio/ksuid"

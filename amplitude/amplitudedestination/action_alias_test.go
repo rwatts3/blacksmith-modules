@@ -1,7 +1,7 @@
 package amplitudedestination
 
 import (
-	"github.com/nunchistudio/blacksmith/flow/destination"
+	"github.com/nunchistudio/blacksmith/destination"
 )
 
 var _ destination.Action = Alias{}

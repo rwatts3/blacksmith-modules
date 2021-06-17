@@ -11,7 +11,7 @@ import (
 	"time"
 
 	"github.com/nunchistudio/blacksmith/adapter/store"
-	"github.com/nunchistudio/blacksmith/flow/destination"
+	"github.com/nunchistudio/blacksmith/destination"
 	"github.com/nunchistudio/blacksmith/helper/errors"
 
 	"gopkg.in/segmentio/analytics-go.v3"

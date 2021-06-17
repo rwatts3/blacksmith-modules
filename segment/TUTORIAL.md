@@ -15,7 +15,7 @@ links:
 In this tutorial, we are going to configure and use the Go module dedicated to the
 Segment API. The module `segment` is composed of a package for Loading data
 to Segment, which is `segmentdestination`. This package exposes a Blacksmith
-[`destination.Destination`](https://pkg.go.dev/github.com/nunchistudio/blacksmith/flow/destination?tab=doc#Destination)
+[`destination.Destination`](https://pkg.go.dev/github.com/nunchistudio/blacksmith/destination?tab=doc#Destination)
 following the [Segment Specification](https://segment.com/docs/connections/spec/)
 for Customer Data.
 
@@ -29,7 +29,7 @@ package main
 
 import (
   "github.com/nunchistudio/blacksmith"
-  "github.com/nunchistudio/blacksmith/flow/destination"
+  "github.com/nunchistudio/blacksmith/destination"
 
   "github.com/nunchistudio/blacksmith-modules/segment/segmentdestination"
 )
@@ -71,8 +71,8 @@ import (
   "strings"
   "time"
 
-  "github.com/nunchistudio/blacksmith/flow/destination"
-  "github.com/nunchistudio/blacksmith/flow/source"
+  "github.com/nunchistudio/blacksmith/destination"
+  "github.com/nunchistudio/blacksmith/source"
   "github.com/nunchistudio/blacksmith/helper/errors"
 
   "github.com/nunchistudio/blacksmith-modules/segment/segmentdestination"

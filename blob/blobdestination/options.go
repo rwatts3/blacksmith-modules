@@ -5,7 +5,7 @@ import (
 	"net/url"
 	"os"
 
-	"github.com/nunchistudio/blacksmith/flow/destination"
+	"github.com/nunchistudio/blacksmith/destination"
 	"github.com/nunchistudio/blacksmith/helper/errors"
 )
 

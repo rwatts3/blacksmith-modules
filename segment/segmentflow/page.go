@@ -1,8 +1,8 @@
 package segmentflow
 
 import (
+	"github.com/nunchistudio/blacksmith/destination"
 	"github.com/nunchistudio/blacksmith/flow"
-	"github.com/nunchistudio/blacksmith/flow/destination"
 
 	"github.com/nunchistudio/blacksmith-modules/amplitude/amplitudedestination"
 	"github.com/nunchistudio/blacksmith-modules/segment/segmentdestination"
