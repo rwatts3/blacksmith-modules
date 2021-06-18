@@ -6,8 +6,8 @@ Segment and other web services for Customer Data, such as Amplitude and Mailchim
 ## Version compatibility
 
 Modules follow the semantic versioning of [Blacksmith](https://github.com/nunchistudio/blacksmith)
-for major and minor versions. For example, a module `v0.16.x` will be compatible
-with Blacksmith `v0.16.x`.
+for major and minor versions. For example, a module `v0.18.x` will be compatible
+with Blacksmith `v0.18.x`.
 
 ## License
 

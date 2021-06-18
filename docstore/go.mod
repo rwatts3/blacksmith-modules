@@ -3,10 +3,10 @@ module github.com/nunchistudio/blacksmith-modules/docstore
 go 1.16
 
 require (
-	github.com/nunchistudio/blacksmith v0.17.1
+	github.com/nunchistudio/blacksmith v0.18.0
 	github.com/sirupsen/logrus v1.8.1
-	gocloud.dev v0.22.0
-	gocloud.dev/docstore/mongodocstore v0.22.0
+	gocloud.dev v0.23.0
+	gocloud.dev/docstore/mongodocstore v0.23.0
 )
 
 replace golang.org/x/net => golang.org/x/net v0.0.0-20201202161906-c7110b5ffcbb

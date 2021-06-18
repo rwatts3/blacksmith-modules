@@ -3,9 +3,9 @@ module github.com/nunchistudio/blacksmith-modules/segment
 go 1.16
 
 require (
-	github.com/nunchistudio/blacksmith v0.17.1
-	github.com/nunchistudio/blacksmith-modules/amplitude v0.17.1
-	github.com/nunchistudio/blacksmith-modules/mailchimp v0.17.1
+	github.com/nunchistudio/blacksmith v0.18.0
+	github.com/nunchistudio/blacksmith-modules/amplitude v0.18.0
+	github.com/nunchistudio/blacksmith-modules/mailchimp v0.18.0
 	github.com/sirupsen/logrus v1.8.1
 	gopkg.in/segmentio/analytics-go.v3 v3.1.0
 )
